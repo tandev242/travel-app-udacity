@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Travel Planner</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Travel Planner</h1>
+    </header>
+
+    <main>
+        <section>
+            <form class="form-group" onsubmit="return Client.handleSubmit(event)">
+                <label>City</label>
+                <input id="name" type="text" name="input" placeholder="Enter a city">
+                <label>Depart</label>
+                <input type="date" id="depart" required>
+                <input class="form-group__button" type="submit" name="" value="submit"
+                    onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            </form>
+        </section>
+        <section>
+            <form class="form-group" onsubmit="return Client.handleSubmit(event)">
+                <label>City</label>
+                <input id="name" type="text" name="input" placeholder="Enter a city">
+                <label>Depart</label>
+                <input type="date" id="depart" required>
+                <input class="form-group__button" type="submit" name="" value="submit"
+                    onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/serviceWorker.js').then(registration => {
+                    console.log('SW registered successfully: ', registration)
+                })
+            })
+        } else {
+            console.log("Service Working not supported")
+        }
+    </script>
+</body>
+
+</html>
