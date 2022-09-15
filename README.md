@@ -1,4 +1,4 @@
-# Evaluate A News Article with Natural Language Processing
+# travel-app-udacity
 
 ## Setup
 
@@ -41,4 +41,3 @@ The project has service workers set up in webpack to provide the offline functio
 The testing is done using Jest. To run test, enter the command 
 
 `npm run test`. 
-# travel-app-udacity

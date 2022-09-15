@@ -13,7 +13,8 @@
     </header>
 
     <main>
-        <section>
+        <section id="section1">
+            <img src="https://res.cloudinary.com/dm5kzfzfw/image/upload/v1663124517/wonder-world_lqoaxn.jpg" alt="Wonders of the world">
             <form class="form-group" onsubmit="return Client.handleSubmit(event)">
                 <label>City</label>
                 <input id="name" type="text" name="input" placeholder="Enter a city">
@@ -24,24 +25,20 @@
             </form>
         </section>
         <section>
-            <form class="form-group" onsubmit="return Client.handleSubmit(event)">
-                <label>City</label>
-                <input id="name" type="text" name="input" placeholder="Enter a city">
-                <label>Depart</label>
-                <input type="date" id="depart" required>
-                <input class="form-group__button" type="submit" name="" value="submit"
-                    onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-            </form>
+            <h1>Saved trips</h1>
+            </br>
+            <div id="results">
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>This is a footer</p>
+        <h5>Made by TanDz</h5>
     </footer>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/serviceWorker.js').then(registration => {
+                navigator.serviceWorker.register('/service-worker.js').then(registration => {
                     console.log('SW registered successfully: ', registration)
                 })
             })
