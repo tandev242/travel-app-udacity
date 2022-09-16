@@ -7,6 +7,7 @@ dotenv.config()
 const cors = require('cors')
 const { getImage, getWeather, getCityInfo } = require('./controller')
 
+// define a array to save the travel plan
 let travelPlans = []
 
 const app = express()
@@ -23,10 +24,12 @@ app.get('/', function (req, res) {
     // res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
+// Test server operate properly
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
+// Delete the travel plan with geonamId and depart
 app.post('/api/delete', async function (req, res) {
     const { geonameId, depart } = req.body
     try {
@@ -37,6 +40,7 @@ app.post('/api/delete', async function (req, res) {
     }
 })
 
+// Add the travel plan with city and depart
 app.post('/api/add', async function (req, res) {
     const { city, depart } = req.body
     try {
